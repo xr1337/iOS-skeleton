@@ -10,6 +10,7 @@ A iOS + UIKit template that I always use for new projects.
 - XCConfig setup
 - Simple utilities on storyboard  loading
 - How I organize my project folders
+- Standard fastlane setup with firebase crash upload script
 
 ## How to use?
 
