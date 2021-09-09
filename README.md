@@ -1,18 +1,26 @@
-# iOS-skeleton template
+# iOS Skeleton Template
 
 ## What is it?
-A iOS + UIKit template that I always use for new projects.
+A UIKit base iOS template that I always use for new projects.
 
-## Whats in it?
-- Cloudkit + coredata
-- NSUserdefaults + Key value storage
-- Responder chain coordinators - https://iankeen.tech/2020/05/11/container-coordinators/index.html
+
+## Features in this project
+
+This project includes the following features:
+
+- Cloudkit + Coredata support
+- App groups ( Coredata file saved in app group )
+- NSUserDefaults + NSUbiquitousKeyValueStore
+- App Coordinators with Responder Chains. Taken from https://iankeen.tech/2020/05/11/container-coordinators/index.html
 - XCConfig setup
-- Simple utilities on storyboard  loading
-- How I organize my project folders
-- Standard fastlane setup with firebase crash upload script
+- StoryBoard extension loading
+- Fastlane setup with firebase crash upload
 
-## How to use?
 
-Checkout the project.
-Search for [[CHANGEME]] and configure them to your values.
+## Requirements
+XCode 12 and above
+
+## Installation
+
+Checkout the project or download the [Zip file here](https://github.com/xr1337/iOS-skeleton/archive/refs/heads/main.zip).
+Do a search for `[[CHANGEME]]` and customize them.
