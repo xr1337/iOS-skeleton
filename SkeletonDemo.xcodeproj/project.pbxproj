@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,14 @@
 		C0C4460826E832E6009B6449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C4460726E832E6009B6449 /* Assets.xcassets */; };
 		C0C4460B26E832E6009B6449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C4460926E832E6009B6449 /* LaunchScreen.storyboard */; };
 		C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CB995F26E83E0500339F1F /* CloudKit.framework */; };
+		C0DB30D026F5B1F20069B942 /* PreviewView in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30CF26F5B1F20069B942 /* PreviewView */; };
+		C0DB30D426F5B2410069B942 /* AppTintSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB30D326F5B2410069B942 /* AppTintSelectionViewController.swift */; };
+		C0DB30D726F5B26F0069B942 /* PriorityQueueModule in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30D626F5B26F0069B942 /* PriorityQueueModule */; };
+		C0DB30D926F5B26F0069B942 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30D826F5B26F0069B942 /* DequeModule */; };
+		C0DB30DB26F5B26F0069B942 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DA26F5B26F0069B942 /* Collections */; };
+		C0DB30DD26F5B26F0069B942 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DC26F5B26F0069B942 /* OrderedCollections */; };
+		C0DB30E026F5B2930069B942 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DF26F5B2930069B942 /* SwifterSwift */; };
+		C0DB30E226F5B2DA0069B942 /* AppIconSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB30E126F5B2DA0069B942 /* AppIconSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +55,8 @@
 		C0C4460C26E832E6009B6449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0CB995D26E83DF900339F1F /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 		C0CB995F26E83E0500339F1F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C0DB30D326F5B2410069B942 /* AppTintSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTintSelectionViewController.swift; sourceTree = "<group>"; };
+		C0DB30E126F5B2DA0069B942 /* AppIconSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DB30E026F5B2930069B942 /* SwifterSwift in Frameworks */,
+				C0DB30D026F5B1F20069B942 /* PreviewView in Frameworks */,
+				C0DB30D926F5B26F0069B942 /* DequeModule in Frameworks */,
+				C0DB30DD26F5B26F0069B942 /* OrderedCollections in Frameworks */,
+				C0DB30DB26F5B26F0069B942 /* Collections in Frameworks */,
+				C0DB30D726F5B26F0069B942 /* PriorityQueueModule in Frameworks */,
 				C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				C00C76DF26E83A30006138A6 /* ResponderChain.swift */,
+				C0DB30D126F5B2150069B942 /* Settings */,
 				C00C76DD26E83692006138A6 /* Sample */,
 			);
 			path = Screens;
@@ -207,6 +224,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C0DB30D126F5B2150069B942 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C0DB30D326F5B2410069B942 /* AppTintSelectionViewController.swift */,
+				C0DB30E126F5B2DA0069B942 /* AppIconSelectionViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +249,14 @@
 			dependencies = (
 			);
 			name = SkeletonDemo;
+			packageProductDependencies = (
+				C0DB30CF26F5B1F20069B942 /* PreviewView */,
+				C0DB30D626F5B26F0069B942 /* PriorityQueueModule */,
+				C0DB30D826F5B26F0069B942 /* DequeModule */,
+				C0DB30DA26F5B26F0069B942 /* Collections */,
+				C0DB30DC26F5B26F0069B942 /* OrderedCollections */,
+				C0DB30DF26F5B2930069B942 /* SwifterSwift */,
+			);
 			productName = SkeletonDemo;
 			productReference = C0C445F826E832E1009B6449 /* SkeletonDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +284,11 @@
 				Base,
 			);
 			mainGroup = C0C445EF26E832E1009B6449;
+			packageReferences = (
+				C0DB30CE26F5B1F20069B942 /* XCRemoteSwiftPackageReference "PreviewView" */,
+				C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				C0DB30DE26F5B2930069B942 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+			);
 			productRefGroup = C0C445F926E832E1009B6449 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,11 +323,13 @@
 				C0C4460626E832E1009B6449 /* SkeletonDemo.xcdatamodeld in Sources */,
 				C00C76E026E83A30006138A6 /* ResponderChain.swift in Sources */,
 				C00C76DC26E835F1006138A6 /* Logger+Extension.swift in Sources */,
+				C0DB30D426F5B2410069B942 /* AppTintSelectionViewController.swift in Sources */,
 				C00C76D726E834D8006138A6 /* Persistence.swift in Sources */,
 				C00C76D926E83556006138A6 /* Constants.swift in Sources */,
 				C00C76ED26E83B59006138A6 /* UserDefaultsBackedCloud.swift in Sources */,
 				C00C76E826E83AFB006138A6 /* UIViewController+Extension.swift in Sources */,
 				C00C76EC26E83B59006138A6 /* UserDefaultsBacked.swift in Sources */,
+				C0DB30E226F5B2DA0069B942 /* AppIconSelectionViewController.swift in Sources */,
 				C00C76E226E83A97006138A6 /* ResponderController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +540,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0DB30CE26F5B1F20069B942 /* XCRemoteSwiftPackageReference "PreviewView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/theoriginalbit/PreviewView";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C0DB30DE26F5B2930069B942 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0DB30CF26F5B1F20069B942 /* PreviewView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DB30CE26F5B1F20069B942 /* XCRemoteSwiftPackageReference "PreviewView" */;
+			productName = PreviewView;
+		};
+		C0DB30D626F5B26F0069B942 /* PriorityQueueModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = PriorityQueueModule;
+		};
+		C0DB30D826F5B26F0069B942 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		C0DB30DA26F5B26F0069B942 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		C0DB30DC26F5B26F0069B942 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		C0DB30DF26F5B2930069B942 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DB30DE26F5B2930069B942 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C0C4460426E832E1009B6449 /* SkeletonDemo.xcdatamodeld */ = {

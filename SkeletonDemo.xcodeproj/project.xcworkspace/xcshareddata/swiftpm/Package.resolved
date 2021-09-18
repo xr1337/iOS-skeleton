@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PreviewView",
+        "repositoryURL": "https://github.com/theoriginalbit/PreviewView",
+        "state": {
+          "branch": "main",
+          "revision": "ac66118a6b3d8fa33c45f0485bda89511f7c65e9",
+          "version": null
+        }
+      },
+      {
+        "package": "swift-collections",
+        "repositoryURL": "https://github.com/apple/swift-collections",
+        "state": {
+          "branch": "main",
+          "revision": "52d426a116a4d60fc09f06170a21339c6a281692",
+          "version": null
+        }
+      },
+      {
+        "package": "SwifterSwift",
+        "repositoryURL": "https://github.com/SwifterSwift/SwifterSwift.git",
+        "state": {
+          "branch": "master",
+          "revision": "e7cd53a380a1ad0d0474d476d383001bba3690dd",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
