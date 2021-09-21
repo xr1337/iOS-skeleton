@@ -6,5 +6,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 APP_VERSION = 1.0
-PLIST_PATH = SkeletonDemo/Resources/Info.plist //[[CHANGEME]]
-ENTITLEMENTS_PATH = SkeletonDemo/Resources/App.entitlements //[[CHANGEME]]
+PLIST_PATH = App/Resources/Info.plist //[[CHANGEME]]
+ENTITLEMENTS_PATH = App/Resources/App.entitlements //[[CHANGEME]]
+APP_NAME = CHANGME
