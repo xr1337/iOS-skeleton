@@ -1,0 +1,43 @@
+excluded:
+  - Pods
+  - Carthage
+
+disabled_rules:
+  - trailing_whitespace
+  - type_name
+  - unused_optional_binding
+  - force_try
+  - force_cast
+  - control_statement
+  - discarded_notification_center_observer
+  - unused_enumerated
+  - valid_ibinspectable
+  - class_delegate_protocol
+  - void_return
+  - type_body_length
+  - function_parameter_count
+  - file_length
+
+line_length:
+  warning: 170
+
+identifier_name:
+  max_length:
+    warning: 45
+    error: 60
+  min_length:
+    warning: 1
+
+function_body_length:
+  warning: 45
+
+nesting:
+  type_level:
+    warning: 2
+
+custom_rules:
+  prefer_isnavigationbarhidden:
+    included: ".*\\.swift"
+    regex: "navigationBar.isHidden"
+    name: "Prefer navigationController.isNavigationBarHidden"
+    message: "Recommended to use navigationController?.isNavigationBarHidden instead"
