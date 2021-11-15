@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C0C445F726E832E1009B6449"
-               BuildableName = "SkeletonDemo.app"
+               BuildableName = "CHANGME.app"
                BlueprintName = "SkeletonDemo"
                ReferencedContainer = "container:SkeletonDemo.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0C445F726E832E1009B6449"
-            BuildableName = "SkeletonDemo.app"
+            BuildableName = "CHANGME.app"
             BlueprintName = "SkeletonDemo"
             ReferencedContainer = "container:SkeletonDemo.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0C445F726E832E1009B6449"
-            BuildableName = "SkeletonDemo.app"
+            BuildableName = "CHANGME.app"
             BlueprintName = "SkeletonDemo"
             ReferencedContainer = "container:SkeletonDemo.xcodeproj">
          </BuildableReference>

@@ -31,6 +31,9 @@
 		C0DB30DD26F5B26F0069B942 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DC26F5B26F0069B942 /* OrderedCollections */; };
 		C0DB30E026F5B2930069B942 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DF26F5B2930069B942 /* SwifterSwift */; };
 		C0DB30E226F5B2DA0069B942 /* AppIconSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB30E126F5B2DA0069B942 /* AppIconSelectionViewController.swift */; };
+		C0DB54DC274308EF0058AE42 /* PersistentHistoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB54DA274308EF0058AE42 /* PersistentHistoryHandler.swift */; };
+		C0DB54DD274308EF0058AE42 /* UserDefaults+HistoryTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB54DB274308EF0058AE42 /* UserDefaults+HistoryTracking.swift */; };
+		C0DB54E0274309D60058AE42 /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB54DF274309D60058AE42 /* DarwinNotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		C0CB995F26E83E0500339F1F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C0DB30D326F5B2410069B942 /* AppTintSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTintSelectionViewController.swift; sourceTree = "<group>"; };
 		C0DB30E126F5B2DA0069B942 /* AppIconSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconSelectionViewController.swift; sourceTree = "<group>"; };
+		C0DB54DA274308EF0058AE42 /* PersistentHistoryHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryHandler.swift; sourceTree = "<group>"; };
+		C0DB54DB274308EF0058AE42 /* UserDefaults+HistoryTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+HistoryTracking.swift"; sourceTree = "<group>"; };
+		C0DB54DF274309D60058AE42 /* DarwinNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarwinNotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 		C00C76D026E8336F006138A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C0DB54DE274309C30058AE42 /* DarwinNotification */,
 				C00C76EE26E83C5F006138A6 /* Coordinator */,
 				C00C76DA26E835DA006138A6 /* Logger */,
 				C00C76D526E83477006138A6 /* Persistence */,
@@ -120,6 +127,8 @@
 			children = (
 				C0C4460426E832E1009B6449 /* SkeletonDemo.xcdatamodeld */,
 				C00C76D626E834D8006138A6 /* Persistence.swift */,
+				C0DB54DA274308EF0058AE42 /* PersistentHistoryHandler.swift */,
+				C0DB54DB274308EF0058AE42 /* UserDefaults+HistoryTracking.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -230,6 +239,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		C0DB54DE274309C30058AE42 /* DarwinNotification */ = {
+			isa = PBXGroup;
+			children = (
+				C0DB54DF274309D60058AE42 /* DarwinNotificationCenter.swift */,
+			);
+			path = DarwinNotification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,7 +332,10 @@
 			files = (
 				C0C4460026E832E1009B6449 /* ViewController.swift in Sources */,
 				C0C445FC26E832E1009B6449 /* AppDelegate.swift in Sources */,
+				C0DB54DC274308EF0058AE42 /* PersistentHistoryHandler.swift in Sources */,
 				C0C445FE26E832E1009B6449 /* SceneDelegate.swift in Sources */,
+				C0DB54E0274309D60058AE42 /* DarwinNotificationCenter.swift in Sources */,
+				C0DB54DD274308EF0058AE42 /* UserDefaults+HistoryTracking.swift in Sources */,
 				C0C4460626E832E1009B6449 /* SkeletonDemo.xcdatamodeld in Sources */,
 				C00C76E026E83A30006138A6 /* ResponderChain.swift in Sources */,
 				C00C76DC26E835F1006138A6 /* Logger+Extension.swift in Sources */,
@@ -396,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = "$(APP_VERSION)";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -453,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = "$(APP_VERSION)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
