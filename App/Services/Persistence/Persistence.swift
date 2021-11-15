@@ -12,6 +12,10 @@ extension NSNotification.Name {
   
 }
 
+extension DarwinNotification.Name {
+  static let didUpdateStoreEvent: DarwinNotification.Name = .init("[[CHANGME]].didUpdateStoreEvent")
+}
+
 class AppGroupPersistentContainer: NSPersistentCloudKitContainer {
   #if os(iOS)
   // app group only works on iOS
@@ -29,32 +33,43 @@ final class Persistence {
   static let shared = Persistence()
 
   // MARK: - Core Data stack
-  lazy var persistentContainer: NSPersistentCloudKitContainer = {
+  let persistentContainer: NSPersistentCloudKitContainer
+  let persistentHistoryObserver: PersistentHistoryObserver
+  let appTarget = AppTarget.currentAppTarget()
+
+  static func createPersistentCoordinator(inMemory: Bool) -> NSPersistentCloudKitContainer {
     let container = AppGroupPersistentContainer(name: Constants.Persistence.container)
     if let storeDescription = container.persistentStoreDescriptions.first {
       storeDescription.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+      storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+      if inMemory {
+        storeDescription.url = URL(fileURLWithPath: "/dev/null")
+        storeDescription.shouldAddStoreAsynchronously = false
+      }
     }
     container.loadPersistentStores(completionHandler: { (_, error) in
       if let error = error as NSError? {
         Logger.database.error("Unresolved error \(error, privacy: .public), \(error.userInfo, privacy: .public)")
-        #if DEBUG
+#if DEBUG
         fatalError("Unresolved error \(error), \(error.userInfo)")
-        #endif
+#endif
       }
     })
     return container
-  }()
+  }
 
   var context: NSManagedObjectContext {
     let context = persistentContainer.viewContext
-    context.automaticallyMergesChangesFromParent = true
-    context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+    context.transactionAuthor = appTarget.rawValue
+    context.name = "view_context"
     return context
   }
 
-  private init() {
-    NotificationCenter.default.addObserver(self, selector: #selector(eventDidChange),
-                                           name: NSPersistentCloudKitContainer.eventChangedNotification, object: nil)
+  init(inMemory: Bool = false) {
+    persistentContainer = Self.createPersistentCoordinator(inMemory: inMemory)
+    Logger.database.info("Creating history observer for \(self.appTarget.rawValue, privacy: .public)")
+    persistentHistoryObserver = .init(target: appTarget, persistentContainer: persistentContainer, userDefaults: UserDefaults.standard)
+    persistentHistoryObserver.startObserving()
   }
 
   @objc
@@ -69,17 +84,15 @@ final class Persistence {
     guard context.hasChanges else {
       return
     }
-    if context.hasChanges {
-      do {
-        try context.save()
-        Logger.database.debug("\(#function, privacy: .public) saved")
-      } catch {
-        let nserror = error as NSError
-        Logger.database.error("Unresolved error \(nserror, privacy: .public), \(nserror.userInfo, privacy: .public)")
-        #if DEBUG
-        fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        #endif
-      }
+    do {
+      try context.save()
+      Logger.database.debug("\(#function, privacy: .public) saved")
+    } catch {
+      let nserror = error as NSError
+      Logger.database.error("Unresolved error \(nserror, privacy: .public), \(nserror.userInfo, privacy: .public)")
+#if DEBUG
+      fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+#endif
     }
   }
 }

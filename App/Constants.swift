@@ -5,6 +5,20 @@
 
 import Foundation
 
+public enum AppTarget: String, CaseIterable {
+  case app
+  case safariExtension
+
+  static func currentAppTarget() -> AppTarget {
+    let bundle = Bundle.main.bundleIdentifier
+    switch bundle {
+      case "[[CHANGEME]]" : return app
+      case "[[CHANGEME]].Extension": return safariExtension
+      default: return app
+    }
+  }
+}
+
 enum Constants {
   enum App {
     static var feedbackLink = "mailto:me@sufiyanyasa.com?subject=[[CHANGEME]]"
