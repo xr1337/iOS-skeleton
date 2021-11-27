@@ -10,7 +10,9 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
-
+  
+  @UserDefaultsBacked(key: AppTint.settingsKey)
+  var currentTintColor: String = "Blue"
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -43,6 +45,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func sceneWillEnterForeground(_ scene: UIScene) {
     // Called as the scene transitions from the background to the foreground.
     // Use this method to undo the changes made on entering the background.
+    if let scenes = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+      scenes.windows.forEach {
+        $0.tintColor = AppTint.colors[currentTintColor]
+      }
+    }
   }
 
   func sceneDidEnterBackground(_ scene: UIScene) {
