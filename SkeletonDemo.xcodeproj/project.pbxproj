@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00A985E276D5A8E001D460A /* AttributedString+Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A985A276D5A80001D460A /* AttributedString+Markdown.swift */; };
+		C00A985F276D5A8E001D460A /* UITableView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A985B276D5A80001D460A /* UITableView+Autolayout.swift */; };
+		C00A9860276D5A8E001D460A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A985C276D5A80001D460A /* Bundle+Extension.swift */; };
+		C00A9861276D5A8E001D460A /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A985D276D5A80001D460A /* UIView+Autolayout.swift */; };
 		C00C76D326E833CD006138A6 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C00C76D226E833CD006138A6 /* Config.xcconfig */; };
 		C00C76D726E834D8006138A6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C76D626E834D8006138A6 /* Persistence.swift */; };
 		C00C76D926E83556006138A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C76D826E83555006138A6 /* Constants.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C00A985A276D5A80001D460A /* AttributedString+Markdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttributedString+Markdown.swift"; sourceTree = "<group>"; };
+		C00A985B276D5A80001D460A /* UITableView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Autolayout.swift"; sourceTree = "<group>"; };
+		C00A985C276D5A80001D460A /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		C00A985D276D5A80001D460A /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		C00C76D226E833CD006138A6 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		C00C76D626E834D8006138A6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C00C76D826E83555006138A6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 		C00C76E326E83ABB006138A6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C00A985A276D5A80001D460A /* AttributedString+Markdown.swift */,
+				C00A985C276D5A80001D460A /* Bundle+Extension.swift */,
+				C00A985B276D5A80001D460A /* UITableView+Autolayout.swift */,
+				C00A985D276D5A80001D460A /* UIView+Autolayout.swift */,
 				C00C76E626E83AFB006138A6 /* StoryBoard */,
 			);
 			path = Utils;
@@ -331,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0C4460026E832E1009B6449 /* ViewController.swift in Sources */,
+				C00A9861276D5A8E001D460A /* UIView+Autolayout.swift in Sources */,
 				C0C445FC26E832E1009B6449 /* AppDelegate.swift in Sources */,
 				C0DB54DC274308EF0058AE42 /* PersistentHistoryHandler.swift in Sources */,
 				C0C445FE26E832E1009B6449 /* SceneDelegate.swift in Sources */,
@@ -338,9 +351,12 @@
 				C0DB54DD274308EF0058AE42 /* UserDefaults+HistoryTracking.swift in Sources */,
 				C0C4460626E832E1009B6449 /* SkeletonDemo.xcdatamodeld in Sources */,
 				C00C76E026E83A30006138A6 /* ResponderChain.swift in Sources */,
+				C00A985F276D5A8E001D460A /* UITableView+Autolayout.swift in Sources */,
 				C00C76DC26E835F1006138A6 /* Logger+Extension.swift in Sources */,
 				C0DB30D426F5B2410069B942 /* AppTintSelectionViewController.swift in Sources */,
+				C00A9860276D5A8E001D460A /* Bundle+Extension.swift in Sources */,
 				C00C76D726E834D8006138A6 /* Persistence.swift in Sources */,
+				C00A985E276D5A8E001D460A /* AttributedString+Markdown.swift in Sources */,
 				C00C76D926E83556006138A6 /* Constants.swift in Sources */,
 				C00C76ED26E83B59006138A6 /* UserDefaultsBackedCloud.swift in Sources */,
 				C00C76E826E83AFB006138A6 /* UIViewController+Extension.swift in Sources */,
