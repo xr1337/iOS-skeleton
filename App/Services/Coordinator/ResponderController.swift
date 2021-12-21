@@ -60,4 +60,24 @@ extension UIViewController {
     wrapper.modalPresentationStyle = modalPresentationStyle
     present(wrapper, animated: flag, completion: completion)
   }
+  
+  func presentModalSheet(_ viewControllerToPresent: UIViewController, animated flag: Bool,
+                         configurationHandler: ((inout UISheetPresentationController) -> Void)? = nil, completion: (() -> Void)? = nil) {
+    let wrapper = ResponderController(containing: viewControllerToPresent, nextResponder: self)
+    if var sheet = wrapper.sheetPresentationController {
+      if let configurationHandler = configurationHandler {
+        configurationHandler(&sheet)
+      } else {
+        sheet.detents = [.medium(), .large()]
+        sheet.largestUndimmedDetentIdentifier = .medium
+        sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+        sheet.prefersEdgeAttachedInCompactHeight = true
+        sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        sheet.prefersGrabberVisible = true
+      }
+      
+    }
+    present(wrapper, animated: flag, completion: completion)
+  }
+
 }
