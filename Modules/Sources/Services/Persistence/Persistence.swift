@@ -7,10 +7,9 @@
 import Foundation
 import CoreData
 import os
-
-extension NSNotification.Name {
-  
-}
+import Constants
+import DarwinNotification
+import Logger
 
 extension DarwinNotification.Name {
   static let didUpdateStoreEvent: DarwinNotification.Name = .init("[[CHANGME]].didUpdateStoreEvent")
@@ -28,9 +27,9 @@ class AppGroupPersistentContainer: NSPersistentCloudKitContainer {
   #endif
 }
 
-final class Persistence {
+public final class Persistence {
 
-  static let shared = Persistence()
+  public static let shared = Persistence()
 
   // MARK: - Core Data stack
   let persistentContainer: NSPersistentCloudKitContainer
@@ -79,7 +78,7 @@ final class Persistence {
 
   // MARK: - Core Data Saving support
 
-  func saveContext() {
+  public func saveContext() {
     Logger.database.debug("\(#function, privacy: .public)")
     guard context.hasChanges else {
       return

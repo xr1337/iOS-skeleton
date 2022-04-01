@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import UserDefaultsBacked
+import Persistence
+import ModelAppearance
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

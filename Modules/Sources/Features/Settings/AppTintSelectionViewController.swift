@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import OrderedCollections
 import SwifterSwift
+import UserDefaultsBacked
+import ModelAppearance
 
 #if DEBUG
 import SwiftUI
@@ -29,24 +31,6 @@ struct AppTintSelectionVC_Previews: PreviewProvider {
 }
 #endif
 
-enum AppTint {
-  static let settingsKey = "AppTint"
-  static let colors: OrderedDictionary<String, UIColor> = [
-    "Red": .systemRed,
-    "Pink": .systemPink,
-    "Blue": .systemBlue,
-    "Teal": .systemTeal,
-    "Yellow": .systemYellow,
-    "Orange": .systemOrange,
-    "Green": .systemGreen,
-    "Purple": .systemPurple,
-    "Indigo": .systemIndigo,
-    "Gray": .systemGray,
-    "Primary": .label,
-    "Secondary": .secondaryLabel,
-    "Tertiary": .tertiaryLabel
-  ]
-}
 
 class AppTintSelectionViewController: UIViewController {
   

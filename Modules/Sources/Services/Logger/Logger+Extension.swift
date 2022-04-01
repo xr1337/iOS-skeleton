@@ -9,7 +9,7 @@ import Foundation
 import os
 import OSLog
 
-extension Logger {
+public extension Logger {
   private static var subsystem = "[[CHANGEME]]"
   
   static let app = Logger(subsystem: subsystem, category: "UI")

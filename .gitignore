@@ -6,6 +6,7 @@ xcuserdata/
 Assets
 
 #
+.build
 build/
 *.pbxuser
 !default.pbxuser

@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import Constants
 
 // Since our property wrapper's Value type isn't optional, but
 // can still contain nil values, we'll have to introduce this
@@ -18,8 +19,8 @@ extension Optional: AnyOptional {
   var isNil: Bool { self == nil }
 }
 
-@propertyWrapper struct UserDefaultsBacked<Value> {
-  var wrappedValue: Value {
+@propertyWrapper public struct UserDefaultsBacked<Value> {
+  public var wrappedValue: Value {
     get {
       let value = storage.value(forKey: key) as? Value
       return value ?? defaultValue
@@ -39,7 +40,7 @@ extension Optional: AnyOptional {
   private let defaultValue: Value
   private let storage: UserDefaults
 
-  init(wrappedValue defaultValue: Value,
+  public init(wrappedValue defaultValue: Value,
        key: String,
        storage: UserDefaults = .init(suiteName: Constants.Persistence.AppGroupID) ?? .standard) {
     self.defaultValue = defaultValue
