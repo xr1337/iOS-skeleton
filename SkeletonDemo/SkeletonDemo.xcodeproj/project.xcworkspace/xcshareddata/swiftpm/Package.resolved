@@ -1,34 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "PreviewView",
-        "repositoryURL": "https://github.com/theoriginalbit/PreviewView",
-        "state": {
-          "branch": "main",
-          "revision": "ac66118a6b3d8fa33c45f0485bda89511f7c65e9",
-          "version": null
-        }
-      },
-      {
-        "package": "swift-collections",
-        "repositoryURL": "https://github.com/apple/swift-collections",
-        "state": {
-          "branch": "main",
-          "revision": "52d426a116a4d60fc09f06170a21339c6a281692",
-          "version": null
-        }
-      },
-      {
-        "package": "SwifterSwift",
-        "repositoryURL": "https://github.com/SwifterSwift/SwifterSwift.git",
-        "state": {
-          "branch": "master",
-          "revision": "e7cd53a380a1ad0d0474d476d383001bba3690dd",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "previewview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/theoriginalbit/PreviewView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ac66118a6b3d8fa33c45f0485bda89511f7c65e9"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0d4b9e3346eb0373ac6f85fe799b44b9b7e86d7e"
+      }
+    },
+    {
+      "identity" : "swifterswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwifterSwift/SwifterSwift.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "64efd1a49f663bf785b729f7877283b4d0d2736e"
+      }
+    }
+  ],
+  "version" : 2
 }

@@ -12,8 +12,6 @@
 		C00A9860276D5A8E001D460A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A985C276D5A80001D460A /* Bundle+Extension.swift */; };
 		C00A9861276D5A8E001D460A /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A985D276D5A80001D460A /* UIView+Autolayout.swift */; };
 		C00C76E826E83AFB006138A6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C76E726E83AFB006138A6 /* UIViewController+Extension.swift */; };
-		C00FF74627F69E4500437686 /* FeatureSettings in Frameworks */ = {isa = PBXBuildFile; productRef = C00FF74527F69E4500437686 /* FeatureSettings */; };
-		C00FF74827F6A37C00437686 /* ModelAppearance in Frameworks */ = {isa = PBXBuildFile; productRef = C00FF74727F6A37C00437686 /* ModelAppearance */; };
 		C038C8BD27F68CED00E7D878 /* Constants in Frameworks */ = {isa = PBXBuildFile; productRef = C038C8BC27F68CED00E7D878 /* Constants */; };
 		C038C8BF27F68ED100E7D878 /* UserDefaultsBacked in Frameworks */ = {isa = PBXBuildFile; productRef = C038C8BE27F68ED100E7D878 /* UserDefaultsBacked */; };
 		C038C8C127F694FD00E7D878 /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = C038C8C027F694FD00E7D878 /* Logger */; };
@@ -26,9 +24,9 @@
 		C0C4460826E832E6009B6449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C4460726E832E6009B6449 /* Assets.xcassets */; };
 		C0C4460B26E832E6009B6449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C4460926E832E6009B6449 /* LaunchScreen.storyboard */; };
 		C0C7AEF327F6972D00C08288 /* DarwinNotification in Frameworks */ = {isa = PBXBuildFile; productRef = C0C7AEF227F6972D00C08288 /* DarwinNotification */; };
+		C0C8FBA12934379300AB8E3F /* ModelAppearance in Frameworks */ = {isa = PBXBuildFile; productRef = C0C8FBA02934379300AB8E3F /* ModelAppearance */; };
 		C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CB995F26E83E0500339F1F /* CloudKit.framework */; };
 		C0DB30D026F5B1F20069B942 /* PreviewView in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30CF26F5B1F20069B942 /* PreviewView */; };
-		C0DB30D726F5B26F0069B942 /* PriorityQueueModule in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30D626F5B26F0069B942 /* PriorityQueueModule */; };
 		C0DB30D926F5B26F0069B942 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30D826F5B26F0069B942 /* DequeModule */; };
 		C0DB30DB26F5B26F0069B942 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DA26F5B26F0069B942 /* Collections */; };
 		C0DB30DD26F5B26F0069B942 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DC26F5B26F0069B942 /* OrderedCollections */; };
@@ -60,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C8FBA12934379300AB8E3F /* ModelAppearance in Frameworks */,
 				C0C308E927F69AEA00B80EA1 /* Persistence in Frameworks */,
 				C038C8C127F694FD00E7D878 /* Logger in Frameworks */,
 				C0DB30E026F5B2930069B942 /* SwifterSwift in Frameworks */,
@@ -70,9 +69,6 @@
 				C0C308EB27F69AED00B80EA1 /* Coordinator in Frameworks */,
 				C0DB30DB26F5B26F0069B942 /* Collections in Frameworks */,
 				C0C7AEF327F6972D00C08288 /* DarwinNotification in Frameworks */,
-				C00FF74827F6A37C00437686 /* ModelAppearance in Frameworks */,
-				C00FF74627F69E4500437686 /* FeatureSettings in Frameworks */,
-				C0DB30D726F5B26F0069B942 /* PriorityQueueModule in Frameworks */,
 				C038C8BD27F68CED00E7D878 /* Constants in Frameworks */,
 				C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */,
 			);
@@ -202,7 +198,6 @@
 			name = SkeletonDemo;
 			packageProductDependencies = (
 				C0DB30CF26F5B1F20069B942 /* PreviewView */,
-				C0DB30D626F5B26F0069B942 /* PriorityQueueModule */,
 				C0DB30D826F5B26F0069B942 /* DequeModule */,
 				C0DB30DA26F5B26F0069B942 /* Collections */,
 				C0DB30DC26F5B26F0069B942 /* OrderedCollections */,
@@ -213,8 +208,7 @@
 				C0C7AEF227F6972D00C08288 /* DarwinNotification */,
 				C0C308E827F69AEA00B80EA1 /* Persistence */,
 				C0C308EA27F69AED00B80EA1 /* Coordinator */,
-				C00FF74527F69E4500437686 /* FeatureSettings */,
-				C00FF74727F6A37C00437686 /* ModelAppearance */,
+				C0C8FBA02934379300AB8E3F /* ModelAppearance */,
 			);
 			productName = SkeletonDemo;
 			productReference = C0C445F826E832E1009B6449 /* CHANGME.app */;
@@ -517,14 +511,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C00FF74527F69E4500437686 /* FeatureSettings */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FeatureSettings;
-		};
-		C00FF74727F6A37C00437686 /* ModelAppearance */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ModelAppearance;
-		};
 		C038C8BC27F68CED00E7D878 /* Constants */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Constants;
@@ -549,15 +535,14 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DarwinNotification;
 		};
+		C0C8FBA02934379300AB8E3F /* ModelAppearance */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModelAppearance;
+		};
 		C0DB30CF26F5B1F20069B942 /* PreviewView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C0DB30CE26F5B1F20069B942 /* XCRemoteSwiftPackageReference "PreviewView" */;
 			productName = PreviewView;
-		};
-		C0DB30D626F5B26F0069B942 /* PriorityQueueModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = PriorityQueueModule;
 		};
 		C0DB30D826F5B26F0069B942 /* DequeModule */ = {
 			isa = XCSwiftPackageProductDependency;
