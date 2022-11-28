@@ -22,15 +22,17 @@ let serviceGroup = SetupGroup(
   ]
 )
 let modelGroup = SetupGroup(
+  prefixPath: "Model",
   sourcePath: "Sources/Models",
   items: [
     "Appearance": [swiftCollections]
   ]
 )
 let featureGroup = SetupGroup(
+  prefixPath: "Feature",
   sourcePath: "Sources/Features",
   items:[
-    "Settings": ["Appearance", swifterSwift]
+    "Settings": ["ModelAppearance", swifterSwift]
   ]
 )
 
