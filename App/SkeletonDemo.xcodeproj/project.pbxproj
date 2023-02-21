@@ -424,6 +424,7 @@
 				DEVELOPMENT_TEAM = 5472Y4VEBN;
 				ENTITLEMENTS_PATH = "$(ENTITLEMENTS_PATH)";
 				INFOPLIST_FILE = "${PLIST_PATH}";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,6 +448,7 @@
 				DEVELOPMENT_TEAM = 5472Y4VEBN;
 				ENTITLEMENTS_PATH = "$(ENTITLEMENTS_PATH)";
 				INFOPLIST_FILE = "${PLIST_PATH}";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

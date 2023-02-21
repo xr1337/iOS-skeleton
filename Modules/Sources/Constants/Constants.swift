@@ -13,6 +13,7 @@ public enum Constants {
 }
 
 public extension Constants.App {
+  static var bundleID = "[[CHANGEME]]".lowercased()
   static var feedbackLink = "mailto:me@sufiyanyasa.com?subject=[[CHANGEME]]"
   static var storeURL = "[[CHANGEME]]"
   static var privacyURL = "[[CHANGEME]]"

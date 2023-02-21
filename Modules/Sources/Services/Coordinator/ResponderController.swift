@@ -7,6 +7,7 @@
 import Foundation
 import UIKit
 
+/// A Box object that wraps Swift value types for Responder chain transport
 public class ResponderBox: NSObject {
   @nonobjc private let value: Any
 
@@ -24,7 +25,7 @@ public class ResponderBox: NSObject {
   }
 }
 
-
+/// A mediate viewcontroller that links responder chains between modal VCs
 class ResponderController: UIViewController {
   private let nextOverride: UIResponder
   private let child: UIViewController
@@ -54,6 +55,7 @@ class ResponderController: UIViewController {
 }
 
 extension UIViewController {
+  /// Wrap modals within ResponderController to ensure responder chain is linked
   func presentModal(_ viewControllerToPresent: UIViewController, animated flag: Bool,
                     modalPresentationStyle: UIModalPresentationStyle = .automatic, completion: (() -> Void)? = nil) {
     let wrapper = ResponderController(containing: viewControllerToPresent, nextResponder: self)

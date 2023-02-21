@@ -12,11 +12,12 @@ public enum AppTarget: String, CaseIterable {
   case safariExtension
 
   public static func currentAppTarget() -> AppTarget {
-    let bundle = Bundle.main.bundleIdentifier
+    let bundle = Bundle.main.bundleIdentifier?.lowercased()
     switch bundle {
-      case "[[CHANGEME]]" : return app
-      case "[[CHANGEME]].Extension": return safariExtension
-      default: return app
+    case Constants.App.bundleID : return app
+    case "\(Constants.App.bundleID).Extension": return safariExtension
+    default:
+      fatalError("Wrong or missing bundle identifier for target")
     }
   }
 }
