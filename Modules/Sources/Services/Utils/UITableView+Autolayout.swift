@@ -1,6 +1,5 @@
 //
 //  UITableView+Autolayout.swift
-//  ReaderSafari
 //
 //  Created by Sufiyan Yasa on 25/11/2021.
 //
@@ -8,7 +7,7 @@
 import Foundation
 import UIKit
 
-extension UITableView {
+public extension UITableView {
   
   func layoutTableHeaderView() {
     guard let headerView = tableHeaderView else { return }

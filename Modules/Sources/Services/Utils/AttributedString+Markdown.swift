@@ -25,7 +25,7 @@ private enum MarkdownStyledBlock: Equatable {
 
 // MARK: -
 
-extension AttributedString {
+public extension AttributedString {
   
   init(styledMarkdown markdownString: String, fontSize: CGFloat = UIFont.preferredFont(forTextStyle: .body).pointSize, foregroundColor: UIColor = .label) throws {
     

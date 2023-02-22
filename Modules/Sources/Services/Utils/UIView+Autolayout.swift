@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
   @discardableResult
   func anchorByLanguage(
     top: NSLayoutYAxisAnchor? = nil,

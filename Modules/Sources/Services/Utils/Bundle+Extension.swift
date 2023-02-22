@@ -1,6 +1,5 @@
 //
 //  Bundle+Extension.swift
-//  ReaderSafari
 //
 //  Created by Sufiyan Yasa on 01/12/2021.
 //
@@ -8,7 +7,7 @@
 import Foundation
 import UIKit
 
-extension Bundle {
+public extension Bundle {
   
   public var icon: UIImage? {
     if let icons = infoDictionary?["CFBundleIcons"] as? [String: Any],

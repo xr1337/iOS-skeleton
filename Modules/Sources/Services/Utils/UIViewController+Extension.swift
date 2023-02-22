@@ -7,7 +7,7 @@
 import UIKit
 
 // swiftlint:disable force_cast
-extension UIViewController {
+public extension UIViewController {
   static func loadFrom<T>(storyBoardName: String, identifier: String) -> T {
     let vcStoryBord = UIStoryboard.init(name: storyBoardName, bundle: nil)
     let viewController = vcStoryBord.instantiateViewController(identifier: identifier)
@@ -16,7 +16,7 @@ extension UIViewController {
 }
 // swiftlint:enable force_cast
 
-extension UIViewController {
+public extension UIViewController {
 
   func setLargeTitleDisplayMode(_ largeTitleDisplayMode: UINavigationItem.LargeTitleDisplayMode) {
     switch largeTitleDisplayMode {

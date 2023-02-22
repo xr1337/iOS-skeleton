@@ -93,6 +93,7 @@ let serviceGroup = SetupGroup(
     "Logger": [],
     "Coordinator": [],
     "Persistence": ["DarwinNotification"],
+    "Utils": [],
   ]
 )
 let modelGroup = SetupGroup(
