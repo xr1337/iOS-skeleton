@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C0C445F726E832E1009B6449 /* SkeletonDemo */ = {
+		C0C445F726E832E1009B6449 /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0C4460F26E832E6009B6449 /* Build configuration list for PBXNativeTarget "SkeletonDemo" */;
+			buildConfigurationList = C0C4460F26E832E6009B6449 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				C0C445F426E832E1009B6449 /* Sources */,
 				C0C445F526E832E1009B6449 /* Frameworks */,
@@ -195,7 +195,7 @@
 			);
 			dependencies = (
 			);
-			name = SkeletonDemo;
+			name = App;
 			packageProductDependencies = (
 				C0DB30CF26F5B1F20069B942 /* PreviewView */,
 				C0DB30D826F5B26F0069B942 /* DequeModule */,
@@ -228,7 +228,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0C445F326E832E1009B6449 /* Build configuration list for PBXProject "SkeletonDemo" */;
+			buildConfigurationList = C0C445F326E832E1009B6449 /* Build configuration list for PBXProject "App" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -246,7 +246,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0C445F726E832E1009B6449 /* SkeletonDemo */,
+				C0C445F726E832E1009B6449 /* App */,
 			);
 		};
 /* End PBXProject section */
@@ -424,7 +424,7 @@
 				DEVELOPMENT_TEAM = 5472Y4VEBN;
 				ENTITLEMENTS_PATH = "$(ENTITLEMENTS_PATH)";
 				INFOPLIST_FILE = "${PLIST_PATH}";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +448,7 @@
 				DEVELOPMENT_TEAM = 5472Y4VEBN;
 				ENTITLEMENTS_PATH = "$(ENTITLEMENTS_PATH)";
 				INFOPLIST_FILE = "${PLIST_PATH}";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +465,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0C445F326E832E1009B6449 /* Build configuration list for PBXProject "SkeletonDemo" */ = {
+		C0C445F326E832E1009B6449 /* Build configuration list for PBXProject "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0C4460D26E832E6009B6449 /* Debug */,
@@ -474,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0C4460F26E832E6009B6449 /* Build configuration list for PBXNativeTarget "SkeletonDemo" */ = {
+		C0C4460F26E832E6009B6449 /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0C4461026E832E6009B6449 /* Debug */,

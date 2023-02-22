@@ -117,7 +117,7 @@ let targets = allModules.flatMap {$0.makeTargets()} + allModules.flatMap { $0.ma
 let package = Package(
   name: "SkeletonDemo",
   platforms: [
-    .iOS(.v16)
+    .iOS(.v15)
   ],
   products: products,
   dependencies: [
