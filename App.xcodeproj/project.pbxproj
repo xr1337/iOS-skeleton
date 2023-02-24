@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		C00C76D226E833CD006138A6 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		C038C8BB27F68B4400E7D878 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Modules; path = ../Modules; sourceTree = "<group>"; };
+		C05EBA4A29A83BFB0025C705 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		C0C308EC27F69D2700B80EA1 /* ResponderChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderChain.swift; sourceTree = "<group>"; };
 		C0C445F826E832E1009B6449 /* CHANGME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHANGME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C445FB26E832E1009B6449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		C0C445EF26E832E1009B6449 = {
 			isa = PBXGroup;
 			children = (
-				C038C8BB27F68B4400E7D878 /* Modules */,
+				C05EBA4A29A83BFB0025C705 /* Modules */,
 				C0C445FA26E832E1009B6449 /* App */,
 				C0C445F926E832E1009B6449 /* Products */,
 				C0CB995E26E83E0500339F1F /* Frameworks */,
