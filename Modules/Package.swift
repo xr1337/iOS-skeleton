@@ -88,19 +88,18 @@ let commonSetup = SetupGroup(items: [
 let serviceGroup = SetupGroup(
   sourcePath: "Sources/Services",
   items: [
-    "DarwinNotification": ["Constants"],
-    "UserDefaultsBacked": ["Constants"],
-    "Logger": [],
-    "Coordinator": [],
-    "Persistence": ["DarwinNotification"],
-    "Utils": [],
+    "Persistence": [
+      .product(name: "DarwinNotification", package: "SyasaSPM")
+    ],
   ]
 )
 let modelGroup = SetupGroup(
   prefixPath: "Model",
   sourcePath: "Sources/Models",
   items: [
-    "Appearance": [swiftCollections]
+    "Appearance": [
+      swiftCollections
+    ]
   ]
 )
 let featureGroup = SetupGroup(
@@ -122,9 +121,10 @@ let package = Package(
   ],
   products: products,
   dependencies: [
-    .package(url: "https://github.com/SwifterSwift/SwifterSwift.git", branch: "master"),
     .package(url: "https://github.com/apple/swift-collections", branch: "main"),
-    .package(url: "https://github.com/theoriginalbit/PreviewView", branch: "main")
+    .package(url: "https://github.com/SwifterSwift/SwifterSwift.git", branch: "master"),
+    .package(url: "https://github.com/theoriginalbit/PreviewView", branch: "main"),
+    .package(name: "SyasaSPM", path: "../../SyasaSPM")
   ],
   targets: targets
 )
