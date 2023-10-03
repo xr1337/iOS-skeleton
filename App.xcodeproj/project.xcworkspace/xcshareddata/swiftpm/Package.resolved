@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "previewview",
+      "identity" : "keychainaccess",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/theoriginalbit/PreviewView",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
       "state" : {
-        "branch" : "main",
-        "revision" : "ac66118a6b3d8fa33c45f0485bda89511f7c65e9"
+        "branch" : "master",
+        "revision" : "ecb18d8ce4d88277cc4fb103973352d91e18c535"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/apple/swift-collections",
       "state" : {
         "branch" : "main",
-        "revision" : "0d4b9e3346eb0373ac6f85fe799b44b9b7e86d7e"
+        "revision" : "939cfd25234472b4dc91c3caeab304d15bca9a73"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/SwifterSwift/SwifterSwift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "64efd1a49f663bf785b729f7877283b4d0d2736e"
+        "revision" : "5d8c1f78b7f023ea62343f8f0c323bd84508aa0c"
       }
     }
   ],

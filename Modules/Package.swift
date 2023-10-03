@@ -32,7 +32,7 @@ extension Builder {
         targets: ["\(prefixPath)\($0)"])
     }
   }
-  
+
   func makeTargets() -> [Target] {
     items.enumerated().map { _, tuple in
       let name = "\(prefixPath)\(tuple.key)"
@@ -43,7 +43,7 @@ extension Builder {
         resources: [])
     }
   }
-  
+
   func makeTestTargets() -> [Target] {
     testItems.enumerated().map { _, tuple in
       let name = "\(prefixPath)\(tuple.key)"
@@ -54,7 +54,7 @@ extension Builder {
         resources: [])
     }
   }
-  
+
   func makeMockProducts() -> [Product] {
     mockItems.keys.map {
       .library(
@@ -62,7 +62,7 @@ extension Builder {
         targets: ["\(prefixPath)\($0)Mock"])
     }
   }
-  
+
   func makeMockTargets() -> [Target] {
     mockItems.enumerated().map { _, tuple in
       let name = "\(prefixPath)\(tuple.key)Mock"
@@ -77,8 +77,8 @@ extension Builder {
 
 // MARK: - 3rd party dependencies
 let swifterSwift = Target.Dependency.product(name: "SwifterSwift", package: "SwifterSwift")
-let swiftCollections = Target.Dependency.product(name: "OrderedCollections", package: "swift-collections")
-let previewView = Target.Dependency.product(name: "PreviewView", package: "PreviewView")
+let swiftCollections = Target.Dependency.product(
+  name: "OrderedCollections", package: "swift-collections")
 
 // MARK: - Package Setup
 let commonSetup = SetupGroup(items: [
@@ -89,8 +89,8 @@ let serviceGroup = SetupGroup(
   sourcePath: "Sources/Services",
   items: [
     "Persistence": [
-      .product(name: "DarwinNotification", package: "SyasaSPM")
-    ],
+      .product(name: "SYDarwinNotification", package: "SyasaSPM")
+    ]
   ]
 )
 let modelGroup = SetupGroup(
@@ -105,14 +105,14 @@ let modelGroup = SetupGroup(
 let featureGroup = SetupGroup(
   prefixPath: "Feature",
   sourcePath: "Sources/Features",
-  items:[
+  items: [
     "Settings": ["ModelAppearance", swifterSwift]
   ]
 )
 
 let allModules = [commonSetup, serviceGroup, modelGroup, featureGroup]
 let products = allModules.flatMap { $0.makeProducts() }
-let targets = allModules.flatMap {$0.makeTargets()} + allModules.flatMap { $0.makeTestTargets() }
+let targets = allModules.flatMap { $0.makeTargets() } + allModules.flatMap { $0.makeTestTargets() }
 
 let package = Package(
   name: "SkeletonDemo",
@@ -123,8 +123,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/apple/swift-collections", branch: "main"),
     .package(url: "https://github.com/SwifterSwift/SwifterSwift.git", branch: "master"),
-    .package(url: "https://github.com/theoriginalbit/PreviewView", branch: "main"),
-    .package(name: "SyasaSPM", path: "../../SyasaSPM")
+    .package(name: "SyasaSPM", path: "../../SyasaSPM"),
   ],
   targets: targets
 )

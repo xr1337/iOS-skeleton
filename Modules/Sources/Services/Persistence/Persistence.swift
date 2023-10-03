@@ -4,12 +4,12 @@
 //  Created by Sufiyan Yasa on 08/09/2021.
 //
 
-import Foundation
-import CoreData
-import os
 import Constants
-import DarwinNotification
+import CoreData
+import Foundation
 import Logger
+import SYDarwinNotification
+import os
 
 extension DarwinNotification.Name {
   static let didUpdateStoreEvent: DarwinNotification.Name = .init("[[CHANGME]].didUpdateStoreEvent")
@@ -17,13 +17,14 @@ extension DarwinNotification.Name {
 
 class AppGroupPersistentContainer: NSPersistentCloudKitContainer {
   #if os(iOS)
-  // app group only works on iOS
-  override open class func defaultDirectoryURL() -> URL {
-    let identifier = Constants.Persistence.AppGroupID
-    var storeURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: identifier)
-    storeURL = storeURL?.appendingPathComponent(Constants.Persistence.sqllite)
-    return storeURL!
-  }
+    // app group only works on iOS
+    override open class func defaultDirectoryURL() -> URL {
+      let identifier = Constants.Persistence.AppGroupID
+      var storeURL = FileManager.default.containerURL(
+        forSecurityApplicationGroupIdentifier: identifier)
+      storeURL = storeURL?.appendingPathComponent(Constants.Persistence.sqllite)
+      return storeURL!
+    }
   #endif
 }
 
@@ -39,7 +40,8 @@ public final class Persistence {
   static func createPersistentCoordinator(inMemory: Bool) -> NSPersistentCloudKitContainer {
     let container = AppGroupPersistentContainer(name: Constants.Persistence.container)
     if let storeDescription = container.persistentStoreDescriptions.first {
-      storeDescription.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+      storeDescription.setOption(
+        true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
       storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
       if inMemory {
         storeDescription.url = URL(fileURLWithPath: "/dev/null")
@@ -48,10 +50,11 @@ public final class Persistence {
     }
     container.loadPersistentStores(completionHandler: { (_, error) in
       if let error = error as NSError? {
-        Logger.database.error("Unresolved error \(error, privacy: .public), \(error.userInfo, privacy: .public)")
-#if DEBUG
-        fatalError("Unresolved error \(error), \(error.userInfo)")
-#endif
+        Logger.database.error(
+          "Unresolved error \(error, privacy: .public), \(error.userInfo, privacy: .public)")
+        #if DEBUG
+          fatalError("Unresolved error \(error), \(error.userInfo)")
+        #endif
       }
     })
     return container
@@ -66,8 +69,11 @@ public final class Persistence {
 
   init(inMemory: Bool = false) {
     persistentContainer = Self.createPersistentCoordinator(inMemory: inMemory)
-    Logger.database.info("Creating history observer for \(self.appTarget.rawValue, privacy: .public)")
-    persistentHistoryObserver = .init(target: appTarget, persistentContainer: persistentContainer, userDefaults: UserDefaults.standard)
+    Logger.database.info(
+      "Creating history observer for \(self.appTarget.rawValue, privacy: .public)")
+    persistentHistoryObserver = .init(
+      target: appTarget, persistentContainer: persistentContainer,
+      userDefaults: UserDefaults.standard)
     persistentHistoryObserver.startObserving()
   }
 
@@ -88,10 +94,11 @@ public final class Persistence {
       Logger.database.debug("\(#function, privacy: .public) saved")
     } catch {
       let nserror = error as NSError
-      Logger.database.error("Unresolved error \(nserror, privacy: .public), \(nserror.userInfo, privacy: .public)")
-#if DEBUG
-      fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-#endif
+      Logger.database.error(
+        "Unresolved error \(nserror, privacy: .public), \(nserror.userInfo, privacy: .public)")
+      #if DEBUG
+        fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+      #endif
     }
   }
 }
