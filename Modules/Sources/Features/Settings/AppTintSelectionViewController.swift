@@ -9,28 +9,8 @@ import Foundation
 import UIKit
 import OrderedCollections
 import SwifterSwift
-import UserDefaultsBacked
+import SYUserDefaultsBacked
 import ModelAppearance
-
-#if DEBUG
-import SwiftUI
-import PreviewView
-
-struct AppTintSelectionVC_Previews: PreviewProvider {
-  static var previews: some View {
-    NavigationControllerPreview {
-      return [viewController]
-    }
-    .edgesIgnoringSafeArea(.all)
-    .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
-  }
-  
-  static var viewController: UIViewController {
-    AppTintSelectionViewController()
-  }
-}
-#endif
-
 
 class AppTintSelectionViewController: UIViewController {
   

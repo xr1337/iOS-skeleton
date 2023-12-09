@@ -9,25 +9,6 @@ import Foundation
 import UIKit
 import SwifterSwift
 
-#if DEBUG
-import SwiftUI
-import PreviewView
-
-struct AppIconSelector_Previews: PreviewProvider {
-  static var previews: some View {
-    NavigationControllerPreview {
-      return [viewController]
-    }
-    .edgesIgnoringSafeArea(.all)
-    .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
-  }
-  
-  static var viewController: UIViewController {
-    return AppIconSelectionViewController()
-  }
-}
-#endif
-
 class AppIconSelectionViewController: UIViewController {
   
   var iconCollectionView: UICollectionView!
