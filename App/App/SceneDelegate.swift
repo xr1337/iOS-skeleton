@@ -1,14 +1,8 @@
-//
-//  SceneDelegate.swift
-//  SkeletonDemo
-//
-//  Created by Sufiyan Yasa on 08/09/2021.
-//
-
 import UIKit
 import SYUserDefaultsBacked
 import Persistence
 import ModelAppearance
+import App
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

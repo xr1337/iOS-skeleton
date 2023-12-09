@@ -85,7 +85,8 @@ let commonSetup = SetupGroup(items: [
   "Constants": [
     .product(name: "SYUserDefaultsBacked", package: "SyasaSPM"),
     .product(name: "Inject", package: "Inject"),
-  ]
+  ],
+  "App": []
 ])
 
 let serviceGroup = SetupGroup(
