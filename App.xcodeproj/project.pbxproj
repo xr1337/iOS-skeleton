@@ -8,17 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C038C8BD27F68CED00E7D878 /* Constants in Frameworks */ = {isa = PBXBuildFile; productRef = C038C8BC27F68CED00E7D878 /* Constants */; };
-		C038C8BF27F68ED100E7D878 /* UserDefaultsBacked in Frameworks */ = {isa = PBXBuildFile; productRef = C038C8BE27F68ED100E7D878 /* UserDefaultsBacked */; };
-		C038C8C127F694FD00E7D878 /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = C038C8C027F694FD00E7D878 /* Logger */; };
 		C0C308E927F69AEA00B80EA1 /* Persistence in Frameworks */ = {isa = PBXBuildFile; productRef = C0C308E827F69AEA00B80EA1 /* Persistence */; };
-		C0C308EB27F69AED00B80EA1 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = C0C308EA27F69AED00B80EA1 /* Coordinator */; };
 		C0C308ED27F69D2700B80EA1 /* ResponderChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C308EC27F69D2700B80EA1 /* ResponderChain.swift */; };
 		C0C445FC26E832E1009B6449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C445FB26E832E1009B6449 /* AppDelegate.swift */; };
 		C0C445FE26E832E1009B6449 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C445FD26E832E1009B6449 /* SceneDelegate.swift */; };
 		C0C4460026E832E1009B6449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C445FF26E832E1009B6449 /* ViewController.swift */; };
 		C0C4460826E832E6009B6449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C4460726E832E6009B6449 /* Assets.xcassets */; };
 		C0C4460B26E832E6009B6449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C4460926E832E6009B6449 /* LaunchScreen.storyboard */; };
-		C0C7AEF327F6972D00C08288 /* DarwinNotification in Frameworks */ = {isa = PBXBuildFile; productRef = C0C7AEF227F6972D00C08288 /* DarwinNotification */; };
 		C0C8FBA12934379300AB8E3F /* ModelAppearance in Frameworks */ = {isa = PBXBuildFile; productRef = C0C8FBA02934379300AB8E3F /* ModelAppearance */; };
 		C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CB995F26E83E0500339F1F /* CloudKit.framework */; };
 		C0DB30D926F5B26F0069B942 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30D826F5B26F0069B942 /* DequeModule */; };
@@ -49,14 +45,10 @@
 			files = (
 				C0C8FBA12934379300AB8E3F /* ModelAppearance in Frameworks */,
 				C0C308E927F69AEA00B80EA1 /* Persistence in Frameworks */,
-				C038C8C127F694FD00E7D878 /* Logger in Frameworks */,
 				C0DB30E026F5B2930069B942 /* SwifterSwift in Frameworks */,
 				C0DB30D926F5B26F0069B942 /* DequeModule in Frameworks */,
-				C038C8BF27F68ED100E7D878 /* UserDefaultsBacked in Frameworks */,
 				C0DB30DD26F5B26F0069B942 /* OrderedCollections in Frameworks */,
-				C0C308EB27F69AED00B80EA1 /* Coordinator in Frameworks */,
 				C0DB30DB26F5B26F0069B942 /* Collections in Frameworks */,
-				C0C7AEF327F6972D00C08288 /* DarwinNotification in Frameworks */,
 				C038C8BD27F68CED00E7D878 /* Constants in Frameworks */,
 				C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */,
 			);
@@ -169,11 +161,7 @@
 				C0DB30DC26F5B26F0069B942 /* OrderedCollections */,
 				C0DB30DF26F5B2930069B942 /* SwifterSwift */,
 				C038C8BC27F68CED00E7D878 /* Constants */,
-				C038C8BE27F68ED100E7D878 /* UserDefaultsBacked */,
-				C038C8C027F694FD00E7D878 /* Logger */,
-				C0C7AEF227F6972D00C08288 /* DarwinNotification */,
 				C0C308E827F69AEA00B80EA1 /* Persistence */,
-				C0C308EA27F69AED00B80EA1 /* Coordinator */,
 				C0C8FBA02934379300AB8E3F /* ModelAppearance */,
 			);
 			productName = SkeletonDemo;
@@ -390,6 +378,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xr1337.SkeletonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -414,6 +406,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xr1337.SkeletonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -469,25 +465,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Constants;
 		};
-		C038C8BE27F68ED100E7D878 /* UserDefaultsBacked */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UserDefaultsBacked;
-		};
-		C038C8C027F694FD00E7D878 /* Logger */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Logger;
-		};
 		C0C308E827F69AEA00B80EA1 /* Persistence */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Persistence;
-		};
-		C0C308EA27F69AED00B80EA1 /* Coordinator */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Coordinator;
-		};
-		C0C7AEF227F6972D00C08288 /* DarwinNotification */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DarwinNotification;
 		};
 		C0C8FBA02934379300AB8E3F /* ModelAppearance */ = {
 			isa = XCSwiftPackageProductDependency;

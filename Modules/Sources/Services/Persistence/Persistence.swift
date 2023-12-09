@@ -7,9 +7,9 @@
 import Constants
 import CoreData
 import Foundation
-import Logger
 import SYDarwinNotification
 import os
+import SYLogger
 
 extension DarwinNotification.Name {
   static let didUpdateStoreEvent: DarwinNotification.Name = .init("[[CHANGME]].didUpdateStoreEvent")

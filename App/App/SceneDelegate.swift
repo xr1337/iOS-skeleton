@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UserDefaultsBacked
+import SYUserDefaultsBacked
 import Persistence
 import ModelAppearance
 
@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let windowScene = (scene as? UIWindowScene) else { return }
     let window = UIWindow(windowScene: windowScene)
-    window.rootViewController = ViewController()
+    // enable injection on the root controller
+    window.rootViewController = Inject.ViewControllerHost(ViewController())
     window.makeKeyAndVisible()
     self.window = window
   }
