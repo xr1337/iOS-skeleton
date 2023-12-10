@@ -74,13 +74,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		C00C76D426E8346B006138A6 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
 		C00C76DE26E836A9006138A6 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +106,6 @@
 			children = (
 				C00C76D126E833BF006138A6 /* Config */,
 				C00C76CF26E83365006138A6 /* Resources */,
-				C00C76D426E8346B006138A6 /* Screens */,
 				C00C76DE26E836A9006138A6 /* App */,
 			);
 			path = App;

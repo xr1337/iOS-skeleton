@@ -86,16 +86,17 @@ let commonSetup = SetupGroup(items: [
     .product(name: "SYUserDefaultsBacked", package: "SyasaSPM"),
     .product(name: "Inject", package: "Inject"),
   ],
-  "App": []
+  "App": [],
 ])
 
 let serviceGroup = SetupGroup(
   sourcePath: "Sources/Services",
   items: [
     "Persistence": [
+      "Constants",
       .product(name: "SYDarwinNotification", package: "SyasaSPM"),
-      .product(name: "SYLogger", package: "SyasaSPM")
-    ],
+      .product(name: "SYLogger", package: "SyasaSPM"),
+    ]
   ]
 )
 let modelGroup = SetupGroup(
@@ -129,10 +130,10 @@ let package = Package(
     .package(url: "https://github.com/apple/swift-collections", branch: "main"),
     .package(url: "https://github.com/SwifterSwift/SwifterSwift.git", branch: "master"),
     .package(name: "SyasaSPM", path: "../../SyasaSPM"),
-      .package(
-        url: "https://github.com/krzysztofzablocki/Inject.git",
-        from: "1.0.5"
-      ),
+    .package(
+      url: "https://github.com/krzysztofzablocki/Inject.git",
+      from: "1.0.5"
+    ),
   ],
   targets: targets
 )

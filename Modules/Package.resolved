@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "previewview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/theoriginalbit/PreviewView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ac66118a6b3d8fa33c45f0485bda89511f7c65e9"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "branch" : "main",
+        "revision" : "939cfd25234472b4dc91c3caeab304d15bca9a73"
+      }
+    },
+    {
+      "identity" : "swifterswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwifterSwift/SwifterSwift.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "fd51762d3f1041ac4f576a49d4a9420c8b584bd1"
+      }
+    }
+  ],
+  "version" : 2
+}
