@@ -129,7 +129,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/apple/swift-collections", branch: "main"),
     .package(url: "https://github.com/SwifterSwift/SwifterSwift.git", branch: "master"),
-    .package(name: "SyasaSPM", path: "../../SyasaSPM"),
+    .package(url: "https://github.com/xr1337/SyasaSPM.git", branch: "main"),
     .package(
       url: "https://github.com/krzysztofzablocki/Inject.git",
       from: "1.0.5"
