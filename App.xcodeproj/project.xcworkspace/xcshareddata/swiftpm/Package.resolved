@@ -35,6 +35,15 @@
         "branch" : "master",
         "revision" : "5d8c1f78b7f023ea62343f8f0c323bd84508aa0c"
       }
+    },
+    {
+      "identity" : "syasaspm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xr1337/SyasaSPM.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a61dda55500cab037a374f2fb783b6270c9c77d5"
+      }
     }
   ],
   "version" : 2
