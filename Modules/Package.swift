@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -137,3 +137,14 @@ let package = Package(
   ],
   targets: targets
 )
+
+// Code to add experimental swift on all targets
+for target in package.targets {
+  var settings = target.swiftSettings ?? []
+
+  /// Note: When using Swift 6.0 tools “StrictConcurrency” becomes an upcoming rather than experimental feature:
+  /// settings.append(.enableUpcomingFeature("StrictConcurrency"))
+  /// https://useyourloaf.com/blog/strict-concurrency-checking-in-swift-packages/
+  settings.append(.enableExperimentalFeature("StrictConcurrency"))
+  target.swiftSettings = settings
+}
