@@ -123,7 +123,7 @@ let targets = allModules.flatMap { $0.makeTargets() } + allModules.flatMap { $0.
 let package = Package(
   name: "SkeletonDemo",
   platforms: [
-    .iOS(.v15)
+    .iOS(.v16)
   ],
   products: products,
   dependencies: [
