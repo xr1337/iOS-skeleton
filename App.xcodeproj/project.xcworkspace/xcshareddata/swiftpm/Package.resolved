@@ -1,5 +1,5 @@
 {
-  "originHash" : "cd24175a2985e9f0b383fd6f4b89bf2736912bd110c9ff3bc8cff45039248a12",
+  "originHash" : "d824a4a0a64ff835e24face21b1e9af97456dd99772c1b874e8605fbd6db8492",
   "pins" : [
     {
       "identity" : "keychainaccess",
@@ -16,7 +16,7 @@
       "location" : "https://github.com/apple/swift-collections",
       "state" : {
         "branch" : "main",
-        "revision" : "78b544fbe20995ef5310337a86917c7ec40c863a"
+        "revision" : "b45c41445b04344ebdd2751f083e79ac128b959e"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/SwifterSwift/SwifterSwift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "470cf73260e34dfe0cb454555f58dd0917ab9604"
+        "revision" : "ac4aff4f612d3b90c23678a0b8edebe47f3902da"
       }
     },
     {
