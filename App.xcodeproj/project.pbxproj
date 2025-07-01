@@ -12,10 +12,6 @@
 		C0C308E927F69AEA00B80EA1 /* Persistence in Frameworks */ = {isa = PBXBuildFile; productRef = C0C308E827F69AEA00B80EA1 /* Persistence */; };
 		C0C8FBA12934379300AB8E3F /* ModelAppearance in Frameworks */ = {isa = PBXBuildFile; productRef = C0C8FBA02934379300AB8E3F /* ModelAppearance */; };
 		C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CB995F26E83E0500339F1F /* CloudKit.framework */; };
-		C0DB30D926F5B26F0069B942 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30D826F5B26F0069B942 /* DequeModule */; };
-		C0DB30DB26F5B26F0069B942 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DA26F5B26F0069B942 /* Collections */; };
-		C0DB30DD26F5B26F0069B942 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DC26F5B26F0069B942 /* OrderedCollections */; };
-		C0DB30E026F5B2930069B942 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0DB30DF26F5B2930069B942 /* SwifterSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,10 +45,6 @@
 				C05E64BC2B249300009AAF7E /* App in Frameworks */,
 				C0C8FBA12934379300AB8E3F /* ModelAppearance in Frameworks */,
 				C0C308E927F69AEA00B80EA1 /* Persistence in Frameworks */,
-				C0DB30E026F5B2930069B942 /* SwifterSwift in Frameworks */,
-				C0DB30D926F5B26F0069B942 /* DequeModule in Frameworks */,
-				C0DB30DD26F5B26F0069B942 /* OrderedCollections in Frameworks */,
-				C0DB30DB26F5B26F0069B942 /* Collections in Frameworks */,
 				C038C8BD27F68CED00E7D878 /* Constants in Frameworks */,
 				C0CB996026E83E0500339F1F /* CloudKit.framework in Frameworks */,
 			);
@@ -104,10 +96,6 @@
 			);
 			name = App;
 			packageProductDependencies = (
-				C0DB30D826F5B26F0069B942 /* DequeModule */,
-				C0DB30DA26F5B26F0069B942 /* Collections */,
-				C0DB30DC26F5B26F0069B942 /* OrderedCollections */,
-				C0DB30DF26F5B2930069B942 /* SwifterSwift */,
 				C038C8BC27F68CED00E7D878 /* Constants */,
 				C0C308E827F69AEA00B80EA1 /* Persistence */,
 				C0C8FBA02934379300AB8E3F /* ModelAppearance */,
@@ -140,8 +128,6 @@
 			);
 			mainGroup = C0C445EF26E832E1009B6449;
 			packageReferences = (
-				C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */,
-				C0DB30DE26F5B2930069B942 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 			);
 			preferredProjectObjectVersion = 50;
 			productRefGroup = C0C445F926E832E1009B6449 /* Products */;
@@ -371,25 +357,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-collections";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		C0DB30DE26F5B2930069B942 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		C038C8BC27F68CED00E7D878 /* Constants */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -406,26 +373,6 @@
 		C0C8FBA02934379300AB8E3F /* ModelAppearance */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ModelAppearance;
-		};
-		C0DB30D826F5B26F0069B942 /* DequeModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = DequeModule;
-		};
-		C0DB30DA26F5B26F0069B942 /* Collections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = Collections;
-		};
-		C0DB30DC26F5B26F0069B942 /* OrderedCollections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C0DB30D526F5B26F0069B942 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = OrderedCollections;
-		};
-		C0DB30DF26F5B2930069B942 /* SwifterSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C0DB30DE26F5B2930069B942 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
-			productName = SwifterSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
